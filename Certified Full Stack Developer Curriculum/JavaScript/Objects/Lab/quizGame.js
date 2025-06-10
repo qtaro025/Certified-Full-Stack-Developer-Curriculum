@@ -17,14 +17,45 @@
 
 const questions = [];
 
+/**
+ * Gets a ranom question object from the question array arr.
+ * @param {*} arr Array of question objects.
+ * @returns Question object from questionss array arr.
+ */
 const getRandomQuestion = (arr) => {
   const min = 0;
-  const max = arr.lengh
-    const questionIdx = Math.floor(
-    Math.random() * (0, arr.lengh)
-  )
-  return "";
-}
+  const max = arr.length;
+  const questionIdx = Math.floor(Math.random() * (max - min) + min);
+
+  return arr[questionIdx];
+};
+
+/**
+ * Gets a random computer choice from the choices array arr.
+ * @param {*} arr Array of choices.
+ * @returns String answer from the choices array arr.
+ */
+const getRandomComputerChoice = (arr) => {
+  const min = 0;
+  const max = arr.length;
+  const choiceIdx = Math.floor(Math.random() * (max - min) + min);
+
+  return arr[choiceIdx];
+};
+
+/**
+ * Gets the result from a randomly question and computer's choice.
+ * @param {*} question Random trivia question object question to ask.
+ * @param {*} choice Computer's random choice.
+ * @returns String result of question and choice.
+ */
+const getResults = (question, choice) => {
+  if (question.answer === choice) {
+    return `The computer\'s choice is correct!`;
+  } else {
+    return `The computer\'s choice is wrong. The correct answer is: ${question.answer}`;
+  }
+};
 
 const question1 = {
   category: "U.S. History",
@@ -36,13 +67,18 @@ const question1 = {
 const question2 = {
   category: "California State Parks",
   question: "Which California state park is Half Dome Located?",
-  choices: ["Yosemite National Park", "Sequoia National Park", "Kings Canyon National Park"],
+  choices: [
+    "Yosemite National Park",
+    "Sequoia National Park",
+    "Kings Canyon National Park",
+  ],
   answer: "Yosemite National Park",
 };
 
 const question3 = {
   category: "University of California Nobel Laureates",
-  question: "Which University of California university has the highest number of Nobel Lauretes?",
+  question:
+    "Which University of California university has the highest number of Nobel Lauretes?",
   choices: ["UC Irvine", "UC San Diego", "UC Berkeley"],
   answer: "UC Berkeley",
 };
@@ -66,7 +102,8 @@ questions.push(question2);
 questions.push(question3);
 questions.push(question4);
 questions.push(question5);
-
-
-
-
+const question = getRandomQuestion(questions);
+console.log(question.question);
+const computerChoice = getRandomComputerChoice(question.choices);
+console.log(`Computer\s choice: ${computerChoice}`);
+console.log(getResults(question, computerChoice));
