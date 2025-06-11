@@ -102,6 +102,7 @@ questions.push(question2);
 questions.push(question3);
 questions.push(question4);
 questions.push(question5);
+
 const question = getRandomQuestion(questions);
 console.log(question.question);
 const computerChoice = getRandomComputerChoice(question.choices);
