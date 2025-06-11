@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Window Object</h1>
+    <h2>The prompt() Method</h2>
+    <p>Click the button to demonstrate the prompt box.</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        let userInput;
+
+        do {
+          userInput = prompt("Please enter a number between 1 and 10");
+        } while (Number(userInput) < 1 && Number(userInput) > 10);
+
+        document.getElementById("demo").innerHTML =
+          "You entered a valid number: " + userInput;
+      }
+    </script>
+  </body>
+</html>
