@@ -29,5 +29,35 @@
  */
 
 const chunkArrayInGroups = (arr, num) => {
-  return 0;
+  if (arr.length <= 1 || num <= 1) {
+    return arr;
+  }
+  let arrOfArrays = [];
+  let tempArr = [];
+  let groupCount = 0;
+
+  for (let i = 0; i <= arr.length; i++) {
+    if (groupCount < num && i !== arr.length) {
+      tempArr.push(arr[i]);
+      groupCount++;
+    } else {
+      arrOfArrays.push(tempArr);
+      tempArr = [];
+      groupCount = 0;
+
+      if (i !== arr.length) {
+        tempArr.push(arr[i]);
+        groupCount++;
+      }
+    }
+  }
+  return arrOfArrays;
 };
+
+const test_1 = chunkArrayInGroups(["a", "b", "c", "d"], 2);
+const test_2 = chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3);
+const test_3 = chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2);
+const test_4 = chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4);
+const test_5 = chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3);
+const test_6 = chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4);
+const test_7 = chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2);
