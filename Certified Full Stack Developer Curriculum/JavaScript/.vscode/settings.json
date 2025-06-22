@@ -1,3 +1,14 @@
 {
-    "reactSnippets.settings.prettierEnabled": true
+  "reactSnippets.settings.prettierEnabled": true,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "jest.autoEnable": true,
+  "jest.pathToJest": "npm test --",
+  "jest.runAllTestsFirst": true,
+  "jest.showCoverageOnLoad": false,
+  "jest.testExplorer.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "files.eol": "\n"
 }
