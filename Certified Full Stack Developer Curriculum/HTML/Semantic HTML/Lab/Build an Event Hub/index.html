@@ -1,0 +1,163 @@
+<!--
+  In this lab you will utilize the semantic HTML elements to create the structure of a
+  web page. You'll add content and images to make it look like a real event hub.
+
+  Fulfill the user stories below and get all the tests to pass to complete the lab.
+
+  User Stories:
+  -------------
+  1. You should have a header element.
+
+  2. Inside the header element, you should have an h1 element that contains the text Event Hub,
+    and a nav element.
+
+  3. Inside the nav element, you should have an unordered list of two items containing links to
+    different sections of the page. The first item should have the text Upcoming Events, and the
+    second item should have the text Past Events.
+
+  4. Each link should be represented by an a element with an href attribute that links to the
+    corresponding section of the page, #upcoming-events and #past-events respectively.
+
+  5. You should have a main element that contains the different sections of the page.
+
+  6. Inside the main element, you should have two section elements.
+
+  7. The first section element should have an id attribute with the value
+    upcoming-events
+
+  8. Inside the #upcoming-events section, you should have:
+    - An h2 element with the text Upcoming Events.
+    - Two article elements. Each article should represent an event, and it should have :
+      - An h3 element for the event title.
+      - A p element for the event description. You can add a date at the bottom if you like.
+
+  9. The second section element should have an id attribute with the value past-events.
+
+  10. Inside the #past-events section, you should have:
+    - An h2 element with the text Past Events.
+    - Two article elements. Each article element should represent a past event, and it should have:
+      - An h3 element for the event title,
+      - A p element for the event description. You can add a date at the bottom if you like.
+      - An image element with the src attribute pointing to an image file and the alt attribute with a description of the image.
+
+      Note: You can use any text for the event descriptions and dates. You can use the following image URLs for the images if you like:
+
+  https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg.
+  https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Event Hub</h1>
+      <nav>
+        <ul>
+          <li><a href="#upcoming-events">Upcoming Events</a></li>
+          <li><a href="#past-events">Past Events</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <article>
+          <h3>
+            2025 6th International Artificial Intelligence and Blockchain
+            Conference (AIBC 2025)
+          </h3>
+          <p>
+            AIBC 2025 is meant for researchers from academia, industries and
+            research & development organizations all over the globe interested
+            in the areas of Artificial Intelligence and Blockchain. It would be
+            beneficial to bring together a group of experts from diverse fields
+            to discuss recent progress and to share ideas on open questions. The
+            conference will feature world-class keynote speakers in the main
+            areas. Let us join in AIBC 2025 to enjoy the discussion!
+          </p>
+          <p><strong>Dates: </strong>September 17 - 19, 2025</p>
+          <p><strong>Venue Information</strong></p>
+          <address>
+            Location: Special Conference Room at Hitsutsubashi Hall <br>
+            Address: National Center of Sciences Building 2F, 2-1-2 Hitotsubashi,Chiyoda-ku,Tokyo 101-8439
+
+          </address>
+        </article>
+        <article>
+          <h3>International Robot Exhibition 2025</h3>
+          <p>
+            The 2025 <abbr>iREX</abbr> will be held under the theme of
+            “Sustainable Societies Through Robotics” with the aim of creating
+            industries and solving social issues through the coexistence and
+            collaboration of humans and robots. State-of-the-art robots and
+            robot-related technology including AI, ICT, and component
+            technologies will all be on display throughout the event.
+          </p>
+          <p><strong>Dates: </strong>December 03 - December 06, 2005</p>
+          <p><strong>Time: </strong><time>10:00</time> - <time>17:00</time></p>
+          <p><strong>Place: </strong>Tokyo Big Site</p>
+          <img
+            src="https://ifr.org/img/events/irex_2025.jpg"
+            alt="iREX 2025"
+            width="600"
+          />
+        </article>
+      </section>
+      <section id="past-events">
+        <h2>Past Events</h2>
+        <article>
+          <h3>AI for Good Global Summit 2025</h3>
+          <p>
+            Advancing trustworthy AI for sustainable development. AI for Good is
+            identifying
+            <strong
+              >innovative AI applications, building skills and standards, and
+              advancing partnerships to to solve global challenges</strong
+            >.
+          </p>
+          <p>
+            <strong>Dates: </strong>8 - 11 July 2025, <strong>Time: </strong
+            ><time>09:00</time> - <time>18:00</time>
+          </p>
+          <p>
+            <strong>Place: </strong>Online & In-Person (Geneva, Switzerland)
+          </p>
+          <img
+            src="https://s41721.pcdn.co/wp-content/uploads/2024/12/sharing-preview-image-aiforgood.png"
+            alt="AI for Good Global Summit 2025"
+            width="600"
+          />
+        </article>
+        <article>
+          <h3>
+            2025 Online Master of Science in Computer Science (OMSCS) Conference
+          </h3>
+          <p>
+            The conference is an opportunity for OMSCS students and alumni to
+            share their work and connect with the OMSCS community. Hosted
+            annually, the purpose of this unique event is to promote
+            knowledge-sharing and learning and strengthen the OMSCS community.
+          </p>
+          <p><strong>Dates: April 28 - 29, 2025</strong></p>
+          <p>
+            <strong>Location:</strong>
+            <a href="https://pe.gatech.edu/global-learning-center"
+              >Global Learning Center</a
+            >
+            (GLC) at Georgia Tech
+          </p>
+          <img
+            src="https://omscs.gatech.edu/sites/default/files/styles/multipurpose_808x550_/public/images/multipurpose/2025/OMSCS%20_Web%20Banners_Option-01.jpg?itok=bsNyvO0U"
+            alt="Image of OMSCS Conference"
+            width="600"
+          />
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
