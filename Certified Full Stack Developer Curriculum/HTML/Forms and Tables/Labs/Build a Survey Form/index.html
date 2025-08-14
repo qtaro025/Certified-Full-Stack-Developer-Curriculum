@@ -1,0 +1,121 @@
+<!--
+  Build a Survey Form
+
+  User Stories:
+  -------------
+  1. You should have a page title in an h1 element with an id of title.
+  2. You should have a short explanation in a p element with an id of description.
+  3. You should have a form element with an id of survey-form.
+  4. Inside the form element you should have a required input field to enter your name that has an id of name and a type of text.
+  5. Inside the form element you should have a required input field to enter your email that has an id of email.
+  6. If you enter an email that is not formatted correctly, you should see an HTML5 validation error.
+  7. Inside the form element you should have an input field to enter a number that has an id of number.
+  8. The number input should not accept non-numbers, either by preventing youfrom typing them or by showing an HTML5 validation error (depending on your browser).
+  9. If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you should see an HTML5 validation error.
+  10. For the name, email, and number input fields, you should have corresponding label elements in the form, that describe the purpose of each field with the following ids: name-label, email-label, and number-label.
+  11. For the name, email, and number input fields, you should have a placeholder text that gives a description or instructions for each field.
+  12. Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from.
+  13. Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute.
+  14. Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute.
+  15. Inside the form element, you should have a textarea for additional comments.
+  16. Inside the form element, you should have a button with id of submit to submit all the inputs.
+-->
+
+<!DOCTYPE html>
+<htm>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Coursera Computer Science Courses Interest Form</h1>
+      <p id="description">
+        Thank you for taking time to help us improve the quality of Computer
+        Science courses offered on the platform
+      </p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name" id="name-label">Name (required):</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
+          <label for="email" id="email-label">Email (required):</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <label for="number" id="number-label">Age (optional):</label>
+          <input
+            type="number"
+            id="number"
+            name="age"
+            min="10"
+            max="100"
+            placeholder="Age"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Which option describes programming level?</legend>
+          <select name="dropdown" id="dropdown">
+            <option value="select">Select</option>
+            <option value="beginner">Beginner (less than 1 year)</option>
+            <option value="intermediate">Intermediate (1 to 3 years)</option>
+            <option value="upper-intermediate">Upper Intermediate (3 to 5 years)</option>
+            <option value="advanced">Advanced (5 years or more)</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>How likely are you to recommend Coursera Computer Science courses to a friend?</legend>
+          <input type="radio" id="very-unlikely-option" name="very-unlikely" value="very-unlikely-option"/>
+          <label for="very-unlikely-option">Very unlikely</label>
+
+          <input type="radio" id="unlikely-option" name="very-unlikely" value="likely-option"/>
+          <label for="unlikely-option">Unlikely</label>
+
+          <input type="radio" id="neutral-option" name="very-unlikely" value="neutral-option"/>
+          <label for="neutral-option">Neutral</label>
+
+          <input type="radio" id="likely-option" name="very-unlikely" value="likely-option" />
+          <label for="likely-option">Likely</label>
+
+          <input type="radio" id="very-likely-option" name="very-unlikely" value="very-likely-option" />
+          <label for="very-likely-option">Very likely</label>
+        </fieldset>
+        <fieldset>
+          <legend>What are your favorite Computer Science categories? (Check all that apply)</legend>
+          <input type="checkbox" id="category1", name="category1" value="softare-development">
+          <label for="category1">Software Development</label>
+
+          <input type="checkbox" id="category2", name="category2" value="mobile-and-web-development">
+          <label for="category1">Mobile and Web Development</label>
+
+          <input type="checkbox" id="category3", name="category3" value="algorithms">
+          <label for="category1">Algorithms</label>
+
+          <input type="checkbox" id="category4", name="category4" value="design-and-product">
+          <label for="category1">Design and Product</label>
+
+          <input type="checkbox" id="category5", name="category5" value="computer-security-and-networks">
+          <label for="category1">Computer Security and Networks</label>
+        </fieldset>
+        <fieldset>
+          <legend>Please leave comments and/or suggestions</legend>
+          <textarea id="comments" name="comments" rows="10" cols="150"></textarea>
+        </fieldset>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
