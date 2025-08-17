@@ -1,0 +1,129 @@
+<!--
+  Build a Multimedia Player
+
+  User Stories:
+  -------------
+  1. You should have an h1 element for the main title of the page.
+  2. You should have three section elements.
+  3. Inside the first section element, you should have an h2 element for the title of song playing.
+  4. Below the h2 element, you should have an audio element with controls attribute and an aria-label
+    attribute.
+  5. Inside the audio element, you should have a source element with a src attribute pointing to an
+    audio file and a type attribute. You are free to use this audio URL if you like:
+    https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3
+  6. Inside the second section element, you should have an h2 element for the title of the video
+    playing.
+  7. Below the h2 element, you should have a video element with controls, width attributes and an
+    aria-label attribute.
+  8. Inside the video element, you should have a source element with a src attribute pointing to a
+    video file and a type attribute. You are free to use this video URL if you like:
+    https://cdn.freecodecamp.org/curriculum/labs/What is the map method and how does it work.mp4
+  9. Below the source element, you should have a track element with a src attribute pointing to a
+    subtitles file and a kind attribute, a srclang attribute and a label attribute.
+  10. Inside the third section element, you should have an h2 element for the title of the section
+    eg. "Transcript".
+  11. Below the h2 element, you should have a p element with the transcript of the video.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia Player</title>
+  </head>
+  <body>
+    <main>
+      <h1>Multimedia Player</h1>
+      <section>
+        <h2>Now Playing: Sailing Away (Instrumental)</h2>
+        <audio controls aria-label="Sailing Away instrumental">
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"
+            type="audio/mp3"
+          />
+          Your browser does not support the audio tag.
+        </audio>
+      </section>
+      <section>
+        <h2>The Importance of Testing<h2></h2>
+        <video
+          controls
+          width="600"
+          aria-label="Lecture on the importance of software testing"
+        >
+          <source src="https://d3c33hcgiwev3.cloudfront.net/testing-importance.3f70efe0b59811e4b0fe5bcfaef1013e/full/360p/index.mp4?Expires=1755561600&Signature=fjtFkkCLnX4ss231~ai0LI~8utKgfjzg3v~LFp5NFVAJloRUynFvmIR8CD19feiGl3FNQn7nUhjwk0~mUOUr81myqTzhNxw4M61i81oojQ~EwDrpzeH~-NaLUNssdpSPg0Wue1-vrQQ-QSePIASRtLJdNVa68VSJtlQ7SpWgu2Q_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A" type="video/mp4">
+          <track src="https://www.coursera.org/api/subtitleAssetProxy.v1/OL-fFia3TnC_nxYmt45w5g?expiry=1755561600000&hmac=bWCXdCiAiqS9J7o5LgwMnhZunmr03S3FgpCJfA25sX0&fileExtension=vtt" kind="subtitles" srclang="en" label="English">
+        </video>
+      </section>
+      <section>
+        <h2>Transcript</h2>
+        <p>
+          [MUSIC] So this week we're going to talk
+          about the importance of testing. When people first start
+          out in computer science, they typically do not like the test. All right, they find the process of
+          thinking about their programs and how to design them and how to actually
+          implement them to be much more fun and interesting and exciting than testing. But, I would like to point out that
+          testing is sort of an integral part of this process. Okay, that if you think carefully about
+          how you're going to test your program it actually makes the development of
+          your program much, much easier, because you've thought carefully
+          about sort of the corner cases and the things that your
+          program should actually do. So the point here that we're trying to
+          make is that testing is an important and interesting part, and it does allow for you to think
+          carefully about what you're doing. I'd like to let give us a nice example
+          here of a how testing is valuable. >> So actually,
+          I don't do any testing stunts. >> [LAUGH]. >> I'm in this video just for
+          the looks here. >> [LAUGH].
+          >> Just to balance while we're sitting here. >> [LAUGH]. >> But more seriously, actually,
+          after that 10 year break from programming, from writing programs, in the last two or three days I had the pleasure
+          of writing code again. And it was through
+          testing that I understood the actual details of the algorithm. So I, we were trying to get
+          algorithm to work, and we try. Every time we try a few test cases,
+          things would work. But then we run into the next
+          test case and it will fail. And it was impossible to
+          get the code working, except through extensive
+          testing of the code. >> All right, so they're really, there's
+          kind of two strategies for testing. One is, you can be like Scott and
+          just never write any erroneous code. Just no bugs,
+          perfect the first time through. >> That seems the best way. >> [LAUGH] Unfortunately, I don't think
+          we can all teach you to be like Scott. [LAUGH] However there's a second approach,
+          and I want to say a little bit about my experience in teaching
+          students to program. I teach and on campus version of an intro
+          to programming class, and i also teach introduction to interactive programming
+          in Python, and we've run through five sessions now, and in those sessions
+          I've seen lots and lots of bad code. And probably the worst case that I
+          see is when a student is working on a mini-project and they go and
+          they essentially write the entire program. They take it and they then say, hit Run. And they have their fingers crossed, and
+          they're hoping they're like Scott and it's all going to run. >> [LAUGH]
+          >> Except then they're severely disappointed
+          because, bam, an error comes up So they heroically go through their 50 lines,
+          and they look for that error. And then they finally find it and
+          they fix it. And they hit Run again, and
+          another error comes up. And after they're found
+          about the seventh or eighth errors they start
+          to get frustrated. Because it's really hard to find
+          those errors in a 50-line program. And so the best piece of advice I
+          have about testing is the following. Don't write your code and then test. Write a little bit of code. Test. Write a little bit of code. Test. Write a little bit of code. Test. That will keep the pain of testing down
+          at a much more tractable level because if your program is working and
+          you write a couple of lines of code and then a test fails,
+          you know where the failure is. It's in that few lines
+          that you've written. Now you might think, wow with all this
+          testing its going to take me lots of time. But remember, if you test as you go,
+          what you'll see is, that the time you spend on finding
+          those errors is really reduced. And so at the end of the day,
+          testing will save you time. >> I think that's an excellent point here,
+          and I think that in this class we want to take the philosophy where, were going to
+          ease you into testing, that were going to provide you with a bunch of tests
+          that you can run on your own. And that will help you sort of to solidify
+          whether or not your program's actually working and hopefully help you
+          to debug your program as you go. But we also want you to spend the time to
+          think about writing tests on your own and so we're going to provide you with
+          some infrastructure to help you do that as well. And so hopefully between these two, sort of, testing methodologies, we'll help
+          ease you into the process of testing and convince you that what
+          we're saying is correct. The testing is just as
+          important as writing your code. And that testing is something that should
+          go on in parallel with writing your code, not something you just do at the end.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
