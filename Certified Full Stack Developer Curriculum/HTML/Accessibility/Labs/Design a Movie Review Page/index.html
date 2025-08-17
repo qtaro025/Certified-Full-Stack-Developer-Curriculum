@@ -1,0 +1,77 @@
+<!--
+  Design a Movie Review Page
+
+  User Stories:
+  -------------
+  1. You should have a main element.
+  2. Inside the main element, you should have an h1 element for the movie title.
+  3. Below the h1 element, you should have an img element displaying the movie cover.
+    Your img element should have a descriptive alt text describing the image.
+    You are free to use the following image if you like:
+    https://cdn.freecodecamp.org/curriculum/labs/rise-beyond-2.png.
+  4. You should have a p element containing a brief movie description.
+  5. You should have another p element to display the movie rating. Within it,
+    you should have these items in the listed order:
+    - A strong element with the text Movie Rating:.
+    - A span element with an aria-hidden attribute set to true containing a visual representation
+      of the rating using stars ⭐⭐⭐⭐⭐⭐⭐⭐⭐☆.
+    - A numerical value, representing the rating, in parentheses (e.g. 9.2/10) after the span.
+  6. You should have an h2 element with the text Cast Members.
+  7. You should have a ul element.
+  8. Inside the ul element, you should have multiple li elements each containing a strong element for
+    the actor's name followed by the corresponding character name preceded by the text as.
+    (e.g., James Holloway as Ethan Carter).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Review</title>
+  </head>
+  <body>
+    <main>
+      <h1 style="text-align: center">Black Panther</h1>
+      <img
+          src="https://upload.wikimedia.org/wikipedia/en/d/d6/Black_Panther_%28film%29_poster.jpg"
+          alt="Blank Panther movie poster showing the main characters of the movie."
+          width="400"
+
+      />
+      <p>
+        Black Panther is a 2018 American superhero film based on the Marvel
+        Comics character of the same name. Produced by Marvel Studios and
+        distributed by Walt Disney Studios Motion Pictures, it is the 18th film
+        in the Marvel Cinematic Universe (MCU). The film was directed by Ryan
+        Coogler, who co-wrote the screenplay with Joe Robert Cole, and it stars
+        Chadwick Boseman as T'Challa / Black Panther alongside Michael B.
+        Jordan, Lupita Nyong'o, Danai Gurira, Martin Freeman, Daniel Kaluuya,
+        Letitia Wright, Winston Duke, Sterling K. Brown, Angela Bassett, Forest
+        Whitaker, and Andy Serkis. In Black Panther, T'Challa is crowned king of
+        Wakanda following his father's death, but he is challenged by Killmonger
+        (Jordan), who plans to abandon the country's isolationist policies and
+        begin a global revolution.
+      </p>
+      <p>
+        <strong>Movie Rating:</strong>
+        <span aria-hidden="true" title="IMDb rating 7.3 out of 10">⭐⭐⭐⭐⭐⭐⭐☆☆☆</span> (7.3/10)
+      </p>
+      <h2>Cast Members</h2>
+      <ul>
+        <li><strong>Chadwick Boseman</strong> as T'Challa / Black Panther</li>
+        <li><strong>Michael B. Jordan</strong> as N'Jadaka / Eric "Killmonger" Stevens</li>
+        <li><strong>Lupita Nyong'o</strong> as Nakia</li>
+        <li><strong>Danai Gurira</strong> as Okoye</li>
+        <li><strong>Martin Freeman</strong> as Everett K. Ross</li>
+        <li><strong>Daniel Kaluuya</strong> as W'Kabi</li>
+        <li><strong>Letitia Wright</strong> as Shuri</li>
+        <li><strong>Winston Duke</strong> as M'Baku</li>
+        <li><strong>Sterling K. Brown</strong> as N'Jobu</li>
+        <li><strong>Angela Bassett</strong> as Ramonda</li>
+        <li><strong>Forest Whitaker</strong> as Zuri</li>
+        <li><strong>Andy Serkis</strong> as Ulysses Klaue</li>
+      </ul>
+    </main>
+  </body>
+</html>
