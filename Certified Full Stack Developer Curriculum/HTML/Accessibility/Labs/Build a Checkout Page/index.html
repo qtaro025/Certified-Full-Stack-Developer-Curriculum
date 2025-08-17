@@ -1,0 +1,55 @@
+<!--
+  Build a Checkout Page
+
+  User Stories:
+  -------------
+  1. You should have an h1 element with the text Checkout.
+  2. You should have two section elements immediately after the h1 element.
+  3. You should have an h2 element with the text Your Cart within the first section.
+  4. You should have an image of an item in the first section with appropriate alternate text. You can use this image if you would like: https://cdn.freecodecamp.org/curriculum/labs/cube.jpg
+  5. You should have an h2 element with the text Payment Information within the second section.
+  6. You should have a form element within the second section.
+  7. You should have an input with an id and name of card-name within your form and a label associated with it.
+  8. You should have an input with an id and name of card-number within your form and a label associated with it.
+  9. At least two of your input elements should be required and have an aria-required attribute set to true.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+  </head>
+  <main>
+    <h1>Checkout</h1>
+    <section>
+      <h2>Your Cart</h2>
+      <figure>
+        <img src="https://elecomusa.com/cdn/shop/files/Elecom-Black-EX-G-Left-Handed-Trackball-Wireless-USB-Red-Ball.jpg?v=1742428045&width=1000"
+        alt="Black Elecom Black EX-G Left Handed Trackball Wireless USB Mouse with a Red Ball Trackball"
+        width="300"
+        />
+        <figcaption>Left-handed mouse: $34.99</figcaption>
+      </figure>
+    </section>
+    <section>
+      <h2>Payment Information</h2>
+      <form>
+        <label for="card-name">Cardholder name</label>
+        <input type="text" id="card-name" name="card-name" required aria-required="true"><br><br>
+
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" name="card-number" required aria-required="true"><br><br>
+
+        <label for="expiration-date">Expiration Date</label>
+        <input type="text" id="expiration-date" name="expiration-date" required aria-required="true" placeholder="12/25"><br><br>
+
+        <label for="cvv-number">CVV</label>
+        <input type="text" id="cvv-number" name="cvv-number" required aria-required="true" placeholder="123"><br><br>
+
+        <input type="submit" value="Place Order">
+      </form>
+    </section>
+  </main>
+  </body>
+</html>
