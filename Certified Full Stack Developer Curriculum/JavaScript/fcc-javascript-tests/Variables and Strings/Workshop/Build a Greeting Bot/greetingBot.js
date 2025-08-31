@@ -6,18 +6,18 @@
 console.log("Hi there!");
 console.log("I am excited to talk to you.");
 
-let bot;
-let botLocation;
+let bot = "";
+let bot_location = "";
 
-bot = "teacherBot";
-botLocation = "the universe";
+bot += "teacherBot";
+bot_location += "the universe";
 
 console.log("Allow me to introduce myself.");
 
 let botIntroduction = "My name is " + bot + ".";
 console.log(botIntroduction);
 
-let botLocationSentence = "I live in " + botLocation + ".";
+let botLocationSentence = "I live in " + bot_location + ".";
 console.log(botLocationSentence);
 
 bot = "professorBot";
