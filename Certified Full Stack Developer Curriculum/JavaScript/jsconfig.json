@@ -3,7 +3,7 @@
     "enable": true
   },
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2021",
     "module": "commonjs",
     "checkJs": true
   },
