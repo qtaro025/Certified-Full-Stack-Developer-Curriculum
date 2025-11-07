@@ -12,9 +12,9 @@ console.log("");
 
 // Generate a random number between two values;
 console.log("Now, generate a random number between two values.");
-let min = 1;
-let max = 100;
-let randomNum2 = Math.random() * (max - min) + min;
+let minValue = 1;
+let maxValue = 100;
+let randomNum2 = Math.random() * (maxValue - minValue) + minValue;
 console.log(randomNum2);
 console.log("");
 

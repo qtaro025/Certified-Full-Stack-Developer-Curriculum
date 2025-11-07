@@ -28,9 +28,9 @@ let fortune3 = "Be cautious of your new neighbors.";
 let fortune4 = "You will find a new hobby soon.";
 let fortune5 = "It would be wise to avoid the color red today.";
 
-let min = 1;
-let max = 6;
-let randomNumber = Math.floor(Math.random() * (max - min) + min);
+let minVal = 1;
+let maxVal = 6;
+let randomNumber = Math.floor(Math.random() * (maxVal - minVal) + minVal);
 console.log(`Random number is ${randomNumber}`);
 let selectedFortune = "";
 
